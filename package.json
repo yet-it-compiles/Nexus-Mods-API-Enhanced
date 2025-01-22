@@ -1,75 +1,98 @@
 {
-  "name": "Nexux Mods API",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/yet-it-compiles/human-mimicry",
-  "bugs": "https://github.com/yet-it-compiles/human-mimicry/issues",
-  "license": "SEE LICENSE IN LICENSE.md",
-  "author": "Tyler (Yet.it.Compiles)",
-  "funding": [
-    {
-      "type": "GitHub",
-      "url": "https://github.com/sponsors/yet-it-compiles"
+    "name": "nexus-mods-api",
+    "version": "0.1.0",
+    "private": false,
+    "description": "",
+    "author": {
+        "name": "Tyler",
+        "url": "https://github.com/yet-it-compiles"
     },
-    {
-      "type": "CashApp",
-      "url": "https://cash.app/$atYetitCompiles"
+    "contributors": [],
+    "license": "SEE LICENSE IN LICENSE.md",
+    "main": "./src/backend/main.js",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./src/backend/main.js"
+        }
     },
-    {
-      "type": "buymeacoffee",
-      "url": "https://buymeacoffee.com/yet.it.compiles"
+    "homepage": "https://github.com/yet-it-compiles/Nexus-Mods_API",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yet-it-compiles/Nexus-Mods_API"
+    },
+    "bugs": {
+        "url": "https://github.com/yet-it-compiles/Nexus-Mods_API/issues",
+        "email": "Yet.it.Compiles.LLC@gmail.com"
+    },
+    "directories": {
+        "src": "src",
+        "test": "test",
+        "docs": "docs",
+        ".configs": ".configs",
+        "backend": "src/backend",
+        "frontend": "src/frontend"
+    },
+    "scripts": {
+        "start": "node src/backend/main.js",
+        "dev:node": "node src/backend/main.js",
+        "test": "vitest",
+        "format": "prettier --config .configs/.prettierrc.js --check '**/*.{js,jsx,json,css,md}'",
+        "format:fix": "prettier --config .configs/.prettierrc.js --write '**/*.{js,jsx,json,css,md}'",
+        "lint": "eslint . --config .configs/eslint.config.js",
+        "lint:fix": "eslint . --fix --config .configs/eslint.config.js",
+        "polish": "npm run format:fix && npm run lint:fix"
+    },
+    "dependencies": {
+        "os": "^0.1.2",
+        "axios": "^1.7.9",
+        "chalk": "^5.4.1",
+        "dotenv": "^16.4.7",
+        "mysql2": "^3.12.0"
+    },
+    "devDependencies": {
+        "quokka": "^0.0.7",
+        "wallaby": "^1.0.1",
+        "eslint": "^9.18.0",
+        "prettier": "^3.4.2",
+        "cross-env": "^7.0.3",
+        "@eslint/js": "^9.18.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-config-prettier": "^10.0.1",
+        "eslint-plugin-prettier": "^5.2.3"
+    },
+    "keywords": [
+        "nexus-api",
+        "nexus-mods",
+        "api-wrapper",
+        "modding-tools",
+        "mod-automation",
+        "nexus-mods-api",
+        "gaming-utilities",
+        "nexus-integration",
+        "nexus-mods-api-guide",
+        "nexus-mods-api-support",
+        "nexus-mods-api-tutorial",
+        "nexus-mods-api-enhanced",
+        "how-to-use-nexus-mods-api"
+    ],
+    "funding": [
+        {
+            "type": "GitHub",
+            "url": "https://github.com/sponsors/yet-it-compiles"
+        },
+        {
+            "type": "CashApp",
+            "url": "https://cash.app/$atYetitCompiles"
+        },
+        {
+            "type": "BuyMeACoffee",
+            "url": "https://buymeacoffee.com/yet.it.compiles"
+        }
+    ],
+    "engines": {
+        "npm": ">=11.0.0",
+        "node": ">=22.12.0"
     }
-  ],
-  "exports": {
-    ".": {
-      "import": "./src/backend/main.js"
-    }
-  },
-  "main": "./src/main.js",
-  "type": "module",
-  "directories": {
-    "docs": "docs",
-    "backend": "backend"
-  },
-  "scripts": {
-    "dev": "vite",
-    "dev:node": "node src/backend/main.js",
-    "test": "vitest",
-    "test:watch": "vitest --watch",
-    "test:coverage": "vitest --coverage",
-    "format": "prettier --check .",
-    "format:fix": "prettier --write .",
-    "lint": "eslint . --config .configs/eslint.config.js",
-    "lint:fix": "eslint . --fix --config .configs/eslint.config.js",
-    "polish": "prettier --write . && eslint --ext .js,.jsx, . --fix",
-    "type": "module"
-  },
-  "dependencies": {
-    "chalk": "^5.4.1",
-    "dotenv": "^16.4.7"
-  },
-  "devDependencies": {
-    "quokka": "^0.0.7",
-    "wallaby": "^1.0.1",
-    "prettier": "^3.4.2",
-    "eslint": "^9.17.0",
-    "eslint-plugin-html": "^8.1.2",
-    "eslint-plugin-react": "^7.37.3",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-css-modules": "^2.12.0",
-    "eslint-plugin-react-refresh": "^0.4.16"
-  },
-  "keywords": [
-    "eslint",
-    "wallaby",
-    "prettier"
-  ],
-  "engines": {
-    "npm": ">=11.0.0",
-    "node": ">=22.12.0"
-  },
-  "os": [
-    "win32"
-  ]
 }
